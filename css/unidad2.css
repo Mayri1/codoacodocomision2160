@@ -1,0 +1,21 @@
+
+#principal{
+    display: flex;
+    padding: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
+
+}
+.rojo{
+    background-color: red;
+    color: yellow;
+    font-size: 45px;
+    width: 320px;
+    height: 320px;
+    margin: 5px;
+
+}
+.negro{
+    background-color: black;
+    color: white;
+}
