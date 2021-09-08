@@ -1,6 +1,9 @@
-
+*{
+    margin: 0%;
+}
 body{
     width: auto;
+    overflow: hidden;
 }
 header{
     background-image: url('../img/ropa.jpg');
@@ -27,7 +30,7 @@ article{
     background: linear-gradient(rgba(255, 0, 0, 0.514),rgba(0, 128, 0, 0.404),
     rgba(0, 0, 200, 0.404));
     height: 700px;
-    padding-top: 250px;
+    padding-top: 270px;
 }
 nav{
     margin-top: 54px;
@@ -41,10 +44,23 @@ nav ol li{
     background-color: rgb(16, 130, 230);
     margin: 5px;
     display: inline;
-    padding: 10px;
+    padding: 15px;
     
+}
+nav ol li a{
+    text-decoration: none;
+    color: black;
 }
 article h2{
     text-align: center;
    
+}
+footer{
+    background-color:pink;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0px;
+
 }
