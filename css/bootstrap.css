@@ -1,0 +1,14 @@
+body{
+    background-image:url(../img/fondo.jpg) ;
+    background-size: 100%;
+}
+
+.btn-primary{
+    background-color: pink;
+}
+.btn-primary:hover{
+    background-color: pink;
+}
+.bg-otra{
+    background-color: rgba(30, 30, 97, 0.171);
+}
