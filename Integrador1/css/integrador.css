@@ -1,0 +1,39 @@
+
+
+.navbar{
+    
+    background-color: rgb(70, 69, 69) !important;
+}
+.navbar-brand img{
+    width: 90px;
+}
+.izquierda{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 45px;
+    height: 40px;
+}
+.derecha{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 45px;
+    height: 40px;  
+}
+#bsas{
+margin-right: 1px;
+}
+.nav-item >a{
+    color: rgb(179, 170, 170)
+}
+#verde{
+    color: rgb(1, 148, 1);
+}
+/* #portada{
+    width: auto;
+    opacity: 0,5;
+    
+}*/
+.card-img-overlay{
+   margin-right: 0px;
+}
+
