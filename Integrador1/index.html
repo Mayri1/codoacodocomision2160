@@ -9,16 +9,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
 <body>
-    <div class="conteiner">
+    
         <header>
+          <div class="container-fuid">
+           <div class="row col-12 md-6 sm-4 xs-2">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                   <div class="izquierda">
-                  <a id="bsas" class="navbar-brand" href="#"><img src="./img/codoacodo.png" alt=""></a>
-                  <a class="navbar-brand text-white" href="#">Conf Bs As</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
+                    <a id="bsas" class="navbar-brand" href="#"><img src="./img/codoacodo.png" alt=""></a>
+                    <a class="navbar-brand text-white" href="#">Conf Bs As</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
                 </div>
                 <div class="derecha">
                   <div class="collapse navbar-collapse" id="navbarNav">
@@ -43,37 +45,65 @@
                   </div>
                 </div>
               </nav>
-
-           <!-- <div class="row" id="portada" > 
-              <img src="./img/ba1.jpg" alt="">
-              <div class="card text-end bg-none" >
-                <div class="card-body bg-none">
-                  <h5 class="card-title bg-none">Special title treatment</h5>
-                  <p class="card-text bg-none">With supporting text below as a natural lead-in to additional content.</p>
-                  <button type="button" class="btn btn-outline-light">Light</button>
-                  <button type="button" class="btn btn-outline-light">Light</button>
-                </div>
-              </div> 
-              </div>  
-            -->
-     
-        <div class="row">
+          </div>
+         <div class="row">
           <div class="card text-end bg-dark text-white border-0">
             <img src="./img/ba1.jpg" class="card-img" alt="...">
-            <div class="card-img-overlay col-6">
+            <div class="card-img-overlay">
               <h5 class="card-title">Conf Bs As</h5>
               <p class="card-text">Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad, el conocimiento y competencia de los expertos que estan creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti</p>
               <button type="button" class="btn btn-outline-light">Quiero ser orador</button>
-              <button type="button" class="btn btn-outline-light">Quiero comprar tickets</button>
+              <button type="button" id="boton" class="btn btn">Quiero comprar tickets</button>
             </div>
           </div>
-
         </div>
-
+      </div>
+      </div>
         </header>
 
 
+          <main>
+            <section>
+             <div class="container">
+              <div class="row">
+                <div class="titulo mt-3">
+                 <h6 ">CONOCE A LOS</h6>
+                 <H2 ">ORADORES</H2>
+              </div>
+                <div class="card-group m-3">
+                  <div class="card">
+                    <img src="../Integrador1/img/steve.jpg" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <h5 class="card-title">Card title</h5>
+                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                 </div>
+                </div>
+                <div class="card">
+                  <img src="../Integrador1/img/bill.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+               </div>
+               <div class="card">
+                 <img src="../Integrador1/img/ada.jpeg" class="card-img-top" alt="...">
+                 <div class="card-body">
+                   <h5 class="card-title">Card title</h5>
+                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                   <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                 </div>
+               </div>
+             </div>
+            </div>
+          </div>
+           </section>
+        </main>
+      
+
+
      
-    </div>
+    
 </body>
 </html>
