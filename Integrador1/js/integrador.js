@@ -1,5 +1,7 @@
 let mediaqueryList= window.matchMedia("(max-width:700px)");
 let menu= document.getElementById("menu"); 
+
+
 if(mediaqueryList.matches){
     menu.innerHTML=`
    <nav class="navbar navbar-dark bg-dark fixed-top">

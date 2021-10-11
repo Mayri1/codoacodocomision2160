@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>integrador</title>
     <link rel="stylesheet" href="./css/integrador.css">
+    <link rel="stylesheet" href="./css/responsive.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
 <body>
-    
+
+<!-- MENU -->
+
         <header>
           <div class="container-fuid">
            <div class="row ">
@@ -46,21 +49,24 @@
                 </div>
               </nav>
           </div>
+
+<!-- INICIO -->
+
          <div class="row">
-          <div class="card text-end bg-dark text-white border-0">
+          <div  class="card text-end bg-dark text-white border-0">
             <img src="./img/ba1.jpg" class="card-img" alt="No se pudo cargar la imagen">
-            <div class="card-img-overlay " >
+            <div id="tarjeta" class="card-img-overlay" >
               <h5 class="card-title" >Conf Bs As</h5>
               <p class="card-text">Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad, el conocimiento y competencia de los expertos que estan creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti</p>
-              <button type="button" class="btn btn-outline-light">Quiero ser orador</button>
-              <button type="button" id="boton" class="btn btn">Quiero comprar tickets</button>
+              <button type="button" id="boton1" class="btn btn-outline-light">Quiero ser orador</button>
+              <button type="button" id="boton2" class="btn btn">Quiero comprar tickets</button>
             </div>
           </div>
         </div>
-      </div>
-      </div>
+      
         </header>
 
+<!-- PRIMERA SECCION -->
 
           <main>
             <section>
@@ -70,41 +76,49 @@
                  <h6 ">CONOCE A LOS</h6>
                  <H2 ">ORADORES</H2>
               </div>
-                <div class="card-group">
-                  <div class="card">
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="cards">
+                  <div class="card h-100">
                     <img src="../Integrador1/img/steve.jpg" class="card-img-top" alt="No se pudo cargar la imagen">
-                   <div class="card-body">
-                    <button type="button" class="btn btn-warning " id="javascript" >Javascript</button>
-                    <button type="button" class="btn btn-warning" id="react" >React</button>
-                     <h5 class="card-title">Steve Jobs</h5>
-                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, similique consequuntur eligendi maxime saepe blanditiis, voluptatem voluptates atque consequatur veritatis optio, sequi neque cumque molestiae possimus in aut. Nam, ipsum.</p>
-                    
-                 </div>
-                </div>
-                <div class="card">
-                  <img src="../Integrador1/img/bill.jpg" class="card-img-top" alt="No se pudo cargar la imagen">
-                  <div class="card-body">
-                    <button type="button" class="btn btn-warning " id="javascript" >Javascript</button>
-                    <button type="button" class="btn btn-warning" id="react" >React</button>
-                    <h5 class="card-title">Bill Gates</h5>
-                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus sit, odit dolores in sed officiis atque eaque laborum nihil rem, porro at, veritatis culpa praesentium sint optio vel quisquam impedit.</p>
-                    
+                    <div class="card-body">
+                      <button type="button" class="btn btn-warning " id="javascript" >Javascript</button>
+                      <button type="button" class="btn btn-warning" id="react" >React</button>
+                      <h5 class="card-title">Steve Jobs</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel totam repellendus eos repellat voluptas eaque sapiente adipisci, beatae aut laborum tempora, eum voluptatem, doloremque at. Laboriosam atque expedita praesentium! Rerum?</p>
+                    </div>
+                   
                   </div>
-               </div>
-               <div class="card">
-                 <img src="../Integrador1/img/ada.jpeg" class="card-img-top" alt="No se pudo cargar la imagen">
-                 <div class="card-body">
-                  <button type="button" class="btn btn " id="negocios" >Negocios</button>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../Integrador1/img/bill.jpg" class="card-img-top" alt="No se pudo cargar la imagen">
+                    <div class="card-body">
+                      <button type="button" class="btn btn-warning " id="javascript" >Javascript</button>
+                      <button type="button" class="btn btn-warning" id="react" >React</button>
+                      <h5 class="card-title">Bill Gates</h5>
+                      <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis aperiam sunt ab modi suscipit quia rerum voluptas, itaque ratione reprehenderit inventore magni at ipsum dolorum iure, omnis quae vero id!</p>
+                    </div>
+                   
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../Integrador1/img/ada.jpeg" class="card-img-top" alt="No se pudo cargar la imagen">
+                    <div class="card-body">
+                      <button type="button" class="btn btn " id="negocios" >Negocios</button>
                   <button type="button" class="btn btn" id="startups" >startups</button>
-                   <h5 class="card-title">Ada Lovelace</h5>
-                   <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda cupiditate iure iusto temporibus ea provident facere, vero natus voluptates voluptatem illo quod, quidem repudiandae quisquam. Molestias laboriosam nisi ducimus deserunt?</p>
-                  
-                 </div>
-               </div>
-             </div>
+                      <h5 class="card-title">Ada Lovelace</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, nesciunt, esse itaque incidunt sit officia perspiciatis voluptatum eius ducimus qui, modi cumque illum reprehenderit repellat quo eligendi illo? Fugit, in.</p>
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
            </section>
+
+<!-- SEGUNDA SECCION -->
           
            <section class="honolulu">
             <div class="card mb-3" style="border: none; " >
@@ -124,6 +138,8 @@
          
            </section>
 
+<!-- TERCERA SECCION -->
+
            <section>
              <div class="container" id="container">
                 <div class="titulo mt-3">
@@ -133,7 +149,7 @@
 
 
                <div class="formulario ">
-                  <H6 style="text-align: center;">Anotate como orador para dar una charla ignite. Cuéntanos de qué quieres hablar!</H6>
+                  <H6 style="text-align: center;">Anotate como orador para dar una <u class="sub">charla ignite</u>. Cuéntanos de qué quieres hablar!</H6>
                   <div class="row">
                     <div class="col">
                       <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
@@ -156,13 +172,31 @@
            </div>
            </section>
         </main>
+
+<!-- FOOTER -->
+
         <footer>
-          
+        
+          <div class="container-fluid">
+            <div class="row footerClass">
+              <ul >
+                <li><a class="align-top"href="#PreguntasFrecuentes">Preguntas frecuentes</a></li>
+                <li><a class="align-baseline" href="#Contactanos">Contáctanos</a></li>
+                <li><a class="align-baseline" href="#Prensa">Prensa</a></li>
+                <li><a class="align-baseline" href="#Conferencia">Conferencia</a></li>
+                <li><a class="align-top"href="#TerminosYcondiciones">Términos y condiciones</a></li>
+                <li><a class="align-baseline"href="#Privacidad">Privacidad</a></li>
+                <li><a class="align-baseline"href="#Estudiantes">Estudiantes</a></li>
+            </ul>
+            </div>
+          </div>
+        
         </footer>
-      
+                  
 
 
      
-    <script src="./js/integrador.js"></script>
+  <script src="./js/integrador.js"></script>
 </body>
 </html>
+
