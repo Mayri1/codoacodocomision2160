@@ -4,7 +4,7 @@ let menu= document.getElementById("menu");
 
 if(mediaqueryList.matches){
     menu.innerHTML=`
-    <nav class="navbar navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-light bg-light fixed-top">
     <div class="container-fluid">
         <img src="../Integrador1/img/codoacodo.png" alt="" style="height: 35px;">
       <a class="navbar-brand" href="#">Conf Bs As</a>
