@@ -57,7 +57,11 @@ margin-right: 1px;
     color: white;
 }
 
-/* ORADORES */
+/* PRIMERA SECCIÓN */
+#oradores{
+    margin-left: 10px;
+    margin-bottom: 25px;
+}
 
 .titulo{
     text-align: center;   
@@ -103,7 +107,7 @@ margin-right: 1px;
    
 }
 
-/* HONOLULU */
+/* SEGUNDA SECCIÓN */
 
 .honolulu{
     margin-top: 10px;
@@ -147,12 +151,14 @@ text-decoration: none;
 
 footer{
     margin-top: 20px;
-    background-color: #34495E;
+    background: linear-gradient(to right,#1f3042, #204f75);
     padding-left: 15%;
     
    
 }
-
+.footerClass{
+    display: inline-table;
+}
 .footerClass li{
     display: inline-flex;
     background-color: none;
