@@ -47,7 +47,7 @@
     .card-img-overlay{
     
         width: 350px;
-        margin-left: 10px; 
+        margin-left: 10px !important; 
         margin-top: 45px;
       
     }
@@ -59,7 +59,7 @@
         padding: 10px;
     }
     .card-text{
-        font-size: 8px;
+        font-size: 8px !important;
     }
     #boton1{
         width: 100px;
