@@ -187,7 +187,7 @@
      margin-bottom: 30px;
  }
  .card-body-dos h6{
-     font-weight: 700;
+     font-weight: 700 !important;
      margin-bottom: 30px;
      margin-top: 30px;
  }
@@ -198,8 +198,22 @@
 
 
 /* FORMULARIO */
+.formularioTickets{
+   
+   max-width: 75%;
+   margin-left: 200px !important;
+}
+.formCortos{
+    max-width: 900px !important;
+}
+.formLargo{
+    max-width: 915px !important;
+}
 .form-label{
   font-weight: 470;
+}
+.alert{
+    max-width: 895px !important;
 }
 .btn-tickets{
     border-radius: 5px;

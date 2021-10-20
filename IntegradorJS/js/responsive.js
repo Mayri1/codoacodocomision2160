@@ -31,7 +31,7 @@ if(mediaqueryList.matches){
               <a class="nav-link" href="#">Conviertete en orador</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Comprar ticket</a>
+              <a class="nav-link" onclick="comprarTickets()">Comprar ticket</a>
             </li> 
           </ul>
         
