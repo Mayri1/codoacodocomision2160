@@ -120,18 +120,21 @@
       
             <div class="col-6 m-2">
                 <label  class="form-label">Categoría</label>
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" aria-label="Default select example" id="opciones">
                     <option value="1">Estudiante</option>
                     <option value="2">Trainee</option>
                     <option value="3">Junior</option>
                </select>
            </div>
+
+          
        </div>
 
         <div class="form-row">
+           <button class="btn btn-primary text-white m-2" type="button" >Comprar</button>
 
            <div id="totalPagar" class="alert alert-primary col-12 m-2 " role="alert" >Total a Pagar: $</div>
-
+          
            <div class="d-flex ">
               <div class="btn-tickets m-2">
                   <button class="btn text-white" type="reset">Borrar</button>
@@ -140,7 +143,7 @@
                   <button class="btn text-white" type="button" id="botonCalcular">Resumen</button>
               </div>
           </div>
-
+               
       </div>
 
 </div>

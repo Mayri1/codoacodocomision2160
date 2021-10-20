@@ -130,6 +130,7 @@ function comprarTickets() {
                   <div class="btn-tickets m-2">
                       <button class="btn text-white" type="button" id="botonCalcular">Resumen</button>
                   </div>
+                  
               </div>
     
           </div>
@@ -140,4 +141,29 @@ function comprarTickets() {
 
     
     `;
+    document.querySelector("#botonCalcular").addEventListener('click',()=>{
+      let inputs = document.querySelectorAll('input');
+      let descuento = document.querySelector('#opciones').value;
+      console.log(inputs);
+      
+      let comprador ={
+        nombre: inputs[0].value,
+        apellido: inputs[1].value,
+        correo: inputs[2].value,
+        cantidad: input[3].value
+
+      }
+      calcularValor(descuento, comprador.cantidad)
+    });
+}
+const calcularValor=(desc, cantEntrada)=>{
+  let resultado=0;
+  let alert= document.querySelector('#totalPagar');
+     if(desc == "estudiantes"){
+       
+       (cantEntrada*200)*0.2;
+       
+     alert.innerHTML+= resultado;
+     }
+    
 }
