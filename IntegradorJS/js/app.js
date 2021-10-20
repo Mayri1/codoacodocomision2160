@@ -111,10 +111,10 @@ function comprarTickets() {
           
                 <div class="col-6 m-2">
                     <label  class="form-label">Categoría</label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option value="1">Estudiante</option>
-                        <option value="2">Trainee</option>
-                        <option value="3">Junior</option>
+                    <select id="opciones" class="form-select" aria-label="Default select example">
+                        <option value="estudiante">Estudiante</option>
+                        <option value="trainee">Trainee</option>
+                        <option value="junior">Junior</option>
                    </select>
                </div>
            </div>
@@ -125,10 +125,11 @@ function comprarTickets() {
     
                <div class="d-flex ">
                   <div class="btn-tickets m-2">
-                      <button class="btn text-white" type="reset">Borrar</button>
+                      <button type="reset" class="btn text-white" >Borrar</button>
                   </div>
                   <div class="btn-tickets m-2">
-                      <button class="btn text-white" type="button" id="botonCalcular">Resumen</button>
+                      <button type="button" class="btn text-white"  id="botonCalcular" data-bs-toggle="modal" data-bs-target="#exampleModal">Resumen</button>
+       
                   </div>
                   
               </div>
@@ -136,34 +137,69 @@ function comprarTickets() {
           </div>
     
     </div>
-    
-    </main>    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ticket N° </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cancelar"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary">Confirmar compra</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </main>   
+
 
     
     `;
-    document.querySelector("#botonCalcular").addEventListener('click',()=>{
+    document.querySelector("#botonCalcular").addEventListener('click',()=>{ 
       let inputs = document.querySelectorAll('input');
       let descuento = document.querySelector('#opciones').value;
-      console.log(inputs);
       
       let comprador ={
         nombre: inputs[0].value,
         apellido: inputs[1].value,
         correo: inputs[2].value,
-        cantidad: input[3].value
+        cantidad: inputs[3].value
+      };
+      
+      calcularValor(descuento, comprador.cantidad, comprador);
 
-      }
-      calcularValor(descuento, comprador.cantidad)
     });
-}
-const calcularValor=(desc, cantEntrada)=>{
-  let resultado=0;
-  let alert= document.querySelector('#totalPagar');
-     if(desc == "estudiantes"){
-       
-       (cantEntrada*200)*0.2;
-       
-     alert.innerHTML+= resultado;
+
+    const calcularValor=(desc, cantEntr)=>{
+       let resultado=0;
+       let numTicket = documen.querySelector("#exampleModalLabel");
+       for (let index = 0; index<8; index++) {
+        numTicket.innerHTML+=crearNumTicket();
      }
+
+     let alert= document.querySelector("#totalPagar");
+
+     if(desc == "estudiante"){
+          resultado=(cantEntr*200)*0.2;
+     alert.innerHTML+= resultado;
+     }else if(desc== "trainee"){
+      resultado=(cantEntr*200)*0.5;
+      alert.innerHTML="Total a Pagar: $"
+      alert.innerHTML+= resultado;
+     }else{
+      resultado=(cantEntr*200)*0.85;
+      alert.innerHTML="Total a Pagar: $"
+      alert.innerHTML+= resultado;
+     }
+    };
+    const crearNumTicket=()=>{
+        return Math.floor(Math.random()*9);
+    }
     
 }
