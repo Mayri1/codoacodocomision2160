@@ -30,10 +30,10 @@ function comprarTickets() {
                         <a class="nav-link" href="lugarYfecha">El lugar y la fecha</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link text-white" href="ConvierteteEnOrador">Conviértete en orador</a>
+                        <a class="nav-link text-white"  href="#convierteteOrador">Conviértete en orador</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" id="verde" href="comprarTickets" onclick="comprarTickets()">Comprar tickets</a>
+                        <a class="nav-link" id="verde"  onclick="comprarTickets()">Comprar tickets</a>
                       </li>
                       </div>
                      </ul>
@@ -89,24 +89,24 @@ function comprarTickets() {
     
     <!-- FORMULARIO -->
     
-    <div class="container-fluid d-flex justify-content-center formularioTickets">
+    <div class="container-fluid d-flex justify-content-center formularioTickets" >
         <div class="row">
              <div class="d-flex formCortos" >
                <div class="col-6 m-2">
-                    <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+                    <input type="text" class="form-control" placeholder="Nombre" aria-label="First name" >
                </div>
                <div class="col-6 m-2">
-                   <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
+                   <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name" ">
                </div>
            </div>
                <div class="col-12 m-2 formLargo"  >
-                  <input type="email" class="form-control" placeholder="Correo" aria-label="email">
+                  <input type="email" class="form-control" placeholder="Correo" aria-label="email" >
              </div>
     
             <div class="d-flex formCortos">
                <div class="col-6 m-2">
                     <label  class="form-label">Cantidad</label>
-                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="number">
+                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="number" >
                 </div>
           
                 <div class="col-6 m-2">
@@ -125,7 +125,7 @@ function comprarTickets() {
     
                <div class="d-flex ">
                   <div class="btn-tickets m-2">
-                      <button type="reset" class="btn text-white" >Borrar</button>
+                      <button type="reset" onclick="limpiar()" class="btn text-white" >Borrar</button>
                   </div>
                   <div class="btn-tickets m-2">
                       <button type="button" class="btn text-white"  id="botonCalcular" data-bs-toggle="modal" data-bs-target="#exampleModal">Resumen</button>
@@ -143,7 +143,7 @@ function comprarTickets() {
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Ticket N° </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cancelar"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
           </div>
           <div class="modal-body">
             ...
@@ -176,30 +176,51 @@ function comprarTickets() {
 
     });
 
-    const calcularValor=(desc, cantEntr)=>{
-       let resultado=0;
-       let numTicket = documen.querySelector("#exampleModalLabel");
-       for (let index = 0; index<8; index++) {
-        numTicket.innerHTML+=crearNumTicket();
-     }
+  
+}
 
-     let alert= document.querySelector("#totalPagar");
-
-     if(desc == "estudiante"){
-          resultado=(cantEntr*200)*0.2;
-     alert.innerHTML+= resultado;
-     }else if(desc== "trainee"){
-      resultado=(cantEntr*200)*0.5;
-      alert.innerHTML="Total a Pagar: $"
-      alert.innerHTML+= resultado;
-     }else{
-      resultado=(cantEntr*200)*0.85;
-      alert.innerHTML="Total a Pagar: $"
-      alert.innerHTML+= resultado;
-     }
-    };
-    const crearNumTicket=()=>{
-        return Math.floor(Math.random()*9);
+const calcularValor=(desc, cantEntr, comp)=>{
+    let resultado=0;
+    let descuento=0;
+    let numT= document.querySelector("#exampleModalLabel");
+    for (let index=0; index<8; index++) {
+         numT.innerHTML+=crearNumTicket();
     }
-    
+    let modal= document.querySelector(".modal-body");
+  
+    let alert= document.querySelector("#totalPagar");
+    if(desc == "estudiante"){
+     resultado=(cantEntr*200)*0.2;
+     descuento=(cantEntr*200)*0.8;
+     alert.innerHTML="Total a Pagar: $"
+     alert.innerHTML+= resultado;
+    }else if(desc== "trainee"){
+        resultado=(cantEntr*200)*0.5;
+        descuento=(cantEntr*200)*0.5;
+        alert.innerHTML="Total a Pagar: $"
+        alert.innerHTML+= resultado;
+    }else{
+        resultado=(cantEntr*200)*0.85;
+        descuento=(cantEntr*200)*0.15;
+        alert.innerHTML="Total a Pagar: $"
+        alert.innerHTML+= resultado;
+    }
+    modal.innerHTML= `
+   <p>Nombre: ${comp.nombre}</p>
+   <p>Apellido: ${comp.apellido}</p>
+   <p>Correo: ${comp.correo}</p>
+   <p>Categoria: ${desc}</p>
+   <p>Cantidad de entradas: ${comp.cantidad}</p>
+   <p>Descuento: ${descuento}</p>
+   <p>Total a pagar: ${resultado}</p>
+    `
+};
+
+const crearNumTicket=()=>{
+    return Math.floor(Math.random()*7);
+}
+const limpiar=()=>{
+  let alert= document.querySelector("#totalPagar");
+  alert.innerHTML= "Total a Pagar: $";
+  
 }
