@@ -1,4 +1,5 @@
 
+
 let seccion= document.getElementById("section");
 
 function comprarTickets() {

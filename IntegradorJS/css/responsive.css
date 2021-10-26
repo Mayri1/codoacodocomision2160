@@ -1,4 +1,14 @@
+@media (min-width: 1200px){
+
+    /* MENU */
+        .navbar{
+            background-color: rgb(70, 69, 69) !important;
+    
+    };
+
+}
 @media (max-width: 1200px){
+
     #container{
         width: 50% !important;
     }
@@ -43,6 +53,7 @@
         color: white;
     }
 }
+
 @media (max-width: 699px){
     .card-img-overlay{
     
@@ -76,6 +87,4 @@
         max-width: 85%;
         margin-left: 10px !important;
      }
-     
-
-    }
+}
