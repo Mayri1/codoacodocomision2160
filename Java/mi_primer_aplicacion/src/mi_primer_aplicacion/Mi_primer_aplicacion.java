@@ -1,6 +1,8 @@
 
 package mi_primer_aplicacion;
 
+import accesorios.Auto;
+
 public class Mi_primer_aplicacion {
    
     public static void main(String[] args) {
